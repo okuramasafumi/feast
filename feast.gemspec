@@ -8,17 +8,15 @@ Gem::Specification.new do |spec|
   spec.authors = ["OKURA Masafumi"]
   spec.email = ["masafumi.o1988@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Feast is a FastAPI-inspired web framework for Ruby."
+  spec.description = "Feast is a web framework. It focuses on speed, simplicity and type safety. It makes developing a web API a feast."
+  spec.homepage = "https://github.com/okuramasafumi/feast"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = "https://github.com/okuramasafumi/feast/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
