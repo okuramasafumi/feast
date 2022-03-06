@@ -1,13 +1,16 @@
+inherit_gem:
+  rubocop-sensible: 'config/rubocop.yml'
+
+require:
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rake
+
 AllCops:
-  TargetRubyVersion: 2.6
+  Exclude:
+    - 'Rakefile'
+    - 'feast.gemspec'
+  NewCops: enable
+  EnabledByDefault: true
+  TargetRubyVersion: 3.1
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120
