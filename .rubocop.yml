@@ -8,9 +8,34 @@ require:
 
 AllCops:
   Exclude:
+    - 'Gemfile' # They are dev dependencies
     - 'Rakefile'
     - 'feast.gemspec'
+    - 'bin/**/*'
+    - 'examples/**/*'
   NewCops: enable
   EnabledByDefault: true
   TargetRubyVersion: 3.1
 
+# My style
+Layout/MultilineAssignmentLayout:
+  EnforcedStyle: same_line
+
+# In test files, we want to keep constants simpler and we know when it's broken
+Lint/ConstantResolution:
+  Exclude:
+    - 'test/**/*'
+
+# We need VERSION visible
+Style/ConstantVisibility:
+  Exclude:
+    - 'lib/feast/version.rb'
+
+# We want this!
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+
+# We don't care test style
+Style:
+  Exclude:
+    - 'test/**/*'
