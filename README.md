@@ -1,8 +1,6 @@
 # Feast
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/feast`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Feast is a FastAPI-inspired web framework for Ruby.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The simplest web API with Feast looks like this:
+
+```ruby
+require 'feast/api'
+
+api = Feast::API.new
+
+api.get '/' do
+  {message: 'Hello World'}.to_json
+end
+```
 
 ## Development
 
